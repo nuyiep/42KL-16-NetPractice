@@ -1,0 +1,192 @@
+
+Subnetting IPv4
+https://www.youtube.com/watch?v=ljS07YTEJ2I
+
+Subnetting
+- taking a network and dividing it into sub-networks 
+
+/* 7 attributes of subnetting */
+  1. Network ID
+      - first IP address in each sub-network
+  2. Broadcast IP
+      - last IP address in each sub-network
+  3. First Host IP
+  4. Last Host IP
+  5. Next Network
+  6. #IP Addresses 
+      - Number of IP addresess in sub-network
+  7. CIDR/Subnet
+      - Converting between CIDR/Subnet mask
+
+
+/* Cheat sheet */
+
+a. Start with 1, double until you reach 128 (right to left)
+b. Subtract top row fron 256
+c. From /32, list CIDR notation (right to left)
+
+128   64    32    16    8     4     2     1     Group size
+128   192   224   240   248   252   254   255   Subnet mask
+/25   /26   /27   /28   /29   /30   /31   /32   CIDR
+/17   /18   /19   /20   /21   /22   /23   /24   3rd octet
+/9    /10   /11   /12   /13   /14   /15   /16   2nd octet
+/1    /2    /3    /4    /5    /6    /7    /8    1st octet
+
+***************************************************
+/* Example 1 */
+10.1.1.55 /28
+      .0
+      .16
+      .32
+      .48
+      .64
+
+Network ID      10.1.1.48 
+Broadcast IP    10.1.1.63
+First Host IP   10.1.1.49
+Last Host IP    10.1.1.62
+Next Network    10.1.1.64
+IP Addresses    16 (14 usable)
+CIDR/Subnet     255.255.255.240
+
+************************************************
+/* Example 8 - 1st octet */
+
+213.50.111.222 / 2
+192
+256
+
+Network ID      192.0.0.0
+Broadcast IP    255.255.255.255
+First Host IP   192.0.0.1
+Last Host IP    255.255.255.254
+Next Network    n/a
+IP Addresses    1,073,741,824 ( usable)
+2^(32-2)=2^30=1,073,741,824
+CIDR/Subnet     192.0.0.0
+
+************************************************
+/* Example 7 - 1st octet */
+
+10.50.111.222 / 7
+10
+12
+
+Network ID      10.0.0.0      
+Broadcast IP    11.255.255.255
+First Host IP   10.0.0.1
+Last Host IP    11.255.255.254
+Next Network    12.0.0.0
+IP Addresses    33,554,432  ( usable)
+2^(32-7)= 2^(25)=33,554,432
+CIDR/Subnet     254.0.0.0
+
+*************************************************
+/* Example 6 - 2nd octet */
+
+10.50.111.222 /12
+  .48
+  .64
+
+Network ID      10.48.0.0
+Broadcast IP    10.63.255.255
+First Host IP   10.48.0.1
+Last Host IP    10.63.255.254
+Next Network    10.64.0.0
+IP Addresses     1,048,576( usable)
+2^(32-12) = 2^20=1,048,576
+CIDR/Subnet     255.240.0.0
+
+**************************************************
+/* Example 5 - 3rd octet */
+group size    64
+subnet mask   192
+3rd octet     /18
+
+10.4.211.66 /18
+    .192
+    .256
+    .0
+
+Network ID      10.4.192.0
+Broadcast IP    10.4.255.255
+First Host IP   10.4.192.1
+Last Host IP    10.4.255.254
+Next Network    10.5.0.0
+IP Addresses    
+******* 2 ^ (32 - CIDR) = 32 - 18 = 14 = 2^ 14 = 16384
+CIDR/Subnet     255.255.192.0
+
+***************************************************
+/* Example 4 - 3rd octet */
+group size  32
+subnet      224
+3rd octet   /19
+
+10.4.77.188 /19
+    .64
+    .96
+
+Network ID      10.4.64.0
+Broadcast IP    10.4.95.255
+First Host IP   10.4.64.1
+Last Host IP    10.4.95.254
+Next Network    10.4.96.0
+IP Addresses    8192
+******* 2 ^ (32 - CIDR) = 32 - 19 = 13 -> 2 ^ 13 = 8192
+CIDR/Subnet     255.255.224.0
+
+***************************************************
+/* Example 2 - on the network- use that network */ 
+group size    4
+subnet        252
+CIDR          /30
+
+10.2.2.20 /30
+      .0
+      .4
+      .8
+      .12
+      .16
+      .20
+      .24
+
+Network ID      10.2.2.20
+Broadcast IP    10.2.2.23
+First Host IP   10.2.2.21
+Last Host IP    10.2.2.22
+Next Network    10.2.2.24
+IP Addresses    4 (2 usable)
+CIDR/Subnet     255.255.255.252
+
+*************************************************
+/* Example 3 - passed the number */
+group size    64
+subnet        192
+CIDR          /26
+
+10.2.2.199 /26
+      .0
+      .64
+      .128
+      .192
+      .256 (max is 255)
+10.2.3.0  
+
+Network ID      10.2.2.192
+Broadcast IP    10.2.2.255
+First Host IP   10.2.2.193
+Last Host IP    10.2.2.254
+Next Network    10.2.3.0
+IP Addresses    64 (62 usable)
+CIDR/Subnet     255.255.255.192
+
+*************************************************
+Speed tip
+  - group size can be easily multiplied by 10
+  - every group size lands on 128 at some point
+  - every group size lands on the subnet value of the 
+    same column to the LEFT
+  - start higher, and subtract
+
+  ************************************************

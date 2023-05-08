@@ -1,0 +1,52 @@
+
+Network Devices
+https://www.youtube.com/watch?v=bj-Yfakjllc&list=PLIFyRwBY_4bRLmKfP1KnZA6rZbRHtxmXi&ab_channel=PracticalNetworking
+
+Hosts
+	- device that sends or receives traffic 
+  - Hosts -> client or server
+    client initiates requests, server responds 
+
+  
+IP address
+  - identity of each host
+  - 32 bits  
+  - bit = 1 or 0
+  - 0 1 1 1 0 0 1 1 0 1 0 1 0 1 0 1 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+    represented as 4 octets
+    1000 1000   .   0001 0110   .   0001 0001   .   0110 0010
+      136       .       22      .        17     .      98    -->> IP address
+  - each octet can be 0-255
+
+Network
+  - transports traffic between hosts
+
+Repeaters 
+  - regenerate signals
+  - allow communications across greater distance
+
+Hubs
+  - multi-port repeaters
+  - problem: everyone receives everyone else's data
+
+Bridges
+  - sit between Hub-connected hosts
+  - contain info within hub
+
+Switches
+  - a combination of Hubs and Bridges
+  - contain the info within the two host and client only
+  - facilitate communication WITHIN a network 
+  - network: grouping of hosts which require similar connectivity
+  - hosts on a network share the same IP address space
+
+Routers
+  - facilitate communicate BETWEEN networks (internet)
+  - provides a traffic control point (security, filtering, redirecting)
+  - stored in a routing table
+
+Gateway
+  - each host's way out of their local Network
+
+Internet
+  - a bunch of routers
