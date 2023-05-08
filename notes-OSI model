@@ -1,0 +1,33 @@
+
+OSI Model
+	- rules for networking - 7 layers - together they can perform networking (GOAL)
+  - Layer 1 - Physical - transporting bits
+        - transport bits (1's and 0's) between hosts
+        - **** E.g. Wires, cables, wi-fi, repeaters, hubs
+  - Layer 2 - Data Link - hop to hop
+        - Interacts with the Wire (i.e. physical layer)
+            - NIC (Network Interface cards) / wi-fi access cards
+        - Addressing scheme - MAC addresses
+            - 48 bits, represented as 12 hex digits
+            - 94-65-9C-3B-8A-E5 / 94:65:9C:3B:8A:E5 / 9464.9C3B.8AE5
+            - every NIC has a unique MAC address
+        - ***** Eg. NICs, switches, Mac addresses
+  - Layer 3 - Network - End to End
+        - Addressing scheme - IP addresses
+            - 32 bits, represented as 4 octets, each 0-255
+        - ***** Eg. Routers, Hosts (anything with an IP)
+ 
+ - ARP - address resolution protocol
+       - links a L3 address to a L2 address
+       - http://pracnet.net/arp
+
+    
+  - Layer 4 - Transport - Service to Service
+        - Distinguish data streams
+        - addressing scheme- ports
+            0-65535 - TCP - favors reliability
+            0-65535 - UDP - favors efficiency
+
+L2:      b2b2 -> 8AE5
+L3: 10.1.1.11 -> 192.168.1.99
+L4: TCP 1025  -> 80
