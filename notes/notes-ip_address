@@ -1,0 +1,17 @@
+
+IP address
+
+Class				(N- network, H- host)	
+A 		1-126		NHHH
+B		128- 191	NNHH
+C		192-223		NNNH
+
+127- loop back
+
+Public IP- internet
+Private IP
+	  - 10.0.0.0
+    - 172.16.0.0
+    - 192.168.0.0
+
+
