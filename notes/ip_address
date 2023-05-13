@@ -1,0 +1,27 @@
+
+IP address
+https://www.youtube.com/watch?v=LdSAaSHfK3M&ab_channel=NETWORKINGPLUS 
+
+Subnet mask
+Class				(N- network, H- host)	
+A 		1-126		NHHH
+B		128- 191	NNHH
+C		192-223		NNNH
+
+127- loop back
+
+Public IP- internet
+Private IP
+	- 10.0.0.0
+    - 172.16.0.0
+    - 192.168.0.0
+
+TCP/IP Model
+	- Application
+	- Transport	-> Port number
+	- Network	-> IP address
+	- Physical  -> Mac Address
+
+IPv4 address
+	- 32 bits/4 bytes
+	- 32 bits = 2^32 combinations ~4.3 billion unique addresses

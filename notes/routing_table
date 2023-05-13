@@ -1,0 +1,10 @@
+
+Routing table
+
+- default gateway- when you dont know where to go
+- static route- when you already know where to go
+
+IP Route Table
+- subnets 
+- outgoing interface
+- next-hop address 
