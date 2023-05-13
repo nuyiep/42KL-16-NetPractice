@@ -7,4 +7,6 @@ Subnetting
 
 <img width="132" alt="Screenshot 2023-05-09 at 14 41 38" src="https://user-images.githubusercontent.com/53002130/237015109-48eee94c-cec1-48ae-88c1-2a1b1e8685e7.png">
 
+<img width="1187" alt="Screenshot 2023-05-09 at 14 49 34" src="https://user-images.githubusercontent.com/53002130/237016788-1ce384ca-27ba-470c-a715-5ecd14093270.png">
+
 https://www.youtube.com/watch?v=qulRjRFavJI&t=241s&ab_channel=ITkFunde
